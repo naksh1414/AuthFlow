@@ -240,3 +240,62 @@
     at next (/home/nakshatra/Desktop/NEECOP_ASSIGNMENT/Backend/node_modules/express/lib/router/index.js:280:10)
     at Function.handle (/home/nakshatra/Desktop/NEECOP_ASSIGNMENT/Backend/node_modules/express/lib/router/index.js:175:3)
     at router (/home/nakshatra/Desktop/NEECOP_ASSIGNMENT/Backend/node_modules/express/lib/router/index.js:47:12)
+2025-01-10 12:46:25 error: CustomError: Invalid authentication
+    at authenticate (/app/dist/middlewares/auth.middleware.js:11:19)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at /app/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/app/node_modules/express/lib/router/index.js:346:12)
+    at next (/app/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/app/node_modules/express/lib/router/index.js:175:3)
+    at router (/app/node_modules/express/lib/router/index.js:47:12)
+2025-01-10 12:46:41 error: Login failed
+2025-01-10 12:46:41 error: CustomError: Invalid credentials
+    at AuthService.login (/app/dist/services/auth.service.js:112:23)
+    at async login (/app/dist/controllers/auth.controller.js:27:28)
+2025-01-10 12:46:51 error: Login failed
+2025-01-10 12:46:51 error: CustomError: Invalid credentials
+    at AuthService.login (/app/dist/services/auth.service.js:112:23)
+    at async login (/app/dist/controllers/auth.controller.js:27:28)
+2025-01-10 12:47:12 error: Registration failed: Email already registered
+2025-01-10 12:47:12 error: CustomError: Email already registered
+    at AuthService.registerApplicant (/app/dist/services/auth.service.js:60:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async register (/app/dist/controllers/auth.controller.js:10:28)
+2025-01-10 12:47:28 info: User registered successfully: 678116e0c7e0e34bea640e16
+2025-01-10 12:47:50 info: User logged in successfully: 678116e0c7e0e34bea640e16
+2025-01-10 12:47:59 error: Login failed
+2025-01-10 12:47:59 error: CustomError: Invalid credentials
+    at AuthService.login (/app/dist/services/auth.service.js:112:23)
+    at async login (/app/dist/controllers/auth.controller.js:27:28)
+2025-01-10 12:48:06 error: Login failed
+2025-01-10 12:48:06 error: CustomError: Invalid credentials
+    at AuthService.login (/app/dist/services/auth.service.js:112:23)
+    at async login (/app/dist/controllers/auth.controller.js:27:28)
+2025-01-10 12:48:12 info: User logged in successfully: 678116e0c7e0e34bea640e16
+2025-01-10 12:49:18 error: CustomError: Invalid authentication
+    at authenticate (/app/dist/middlewares/auth.middleware.js:11:19)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at /app/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/app/node_modules/express/lib/router/index.js:346:12)
+    at next (/app/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/app/node_modules/express/lib/router/index.js:175:3)
+    at router (/app/node_modules/express/lib/router/index.js:47:12)
+2025-01-10 12:54:12 error: CustomError: Invalid authentication
+    at authenticate (/app/dist/middlewares/auth.middleware.js:11:19)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at /app/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/app/node_modules/express/lib/router/index.js:346:12)
+    at next (/app/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/app/node_modules/express/lib/router/index.js:175:3)
+    at router (/app/node_modules/express/lib/router/index.js:47:12)
+2025-01-10 12:54:20 info: User logged in successfully: 678116e0c7e0e34bea640e16
+2025-01-10 12:59:01 info: User logged in successfully: 678116e0c7e0e34bea640e16
