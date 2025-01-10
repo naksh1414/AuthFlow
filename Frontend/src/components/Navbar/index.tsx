@@ -5,11 +5,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, LogIn, UserPlus, LogOut } from "lucide-react";
 import { useUser } from "@/context/UserContext";
-import Loader from "../Loader";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const { user, logout, isLoading } = useUser();
+  const { user, logout } = useUser();
   const isActive = (path: string) => pathname === path;
   const handleLogout = async () => {
     try {
@@ -18,9 +17,6 @@ export default function Navbar() {
       console.error("Logout failed:", error);
     }
   };
-  if (isLoading) {
-    return <Loader></Loader>;
-  }
 
   return (
     <nav className="bg-gray-900 border-b border-gray-800">
