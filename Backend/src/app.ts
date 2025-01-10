@@ -21,7 +21,14 @@ const app = express();
 connectToDatabase();
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      process.env.FRONTEND_URL || "http://localhost:3000",
+    ],
+  })
+);
 app.use(helmet());
 app.use(compression());
 app.use(express.json());

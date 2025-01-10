@@ -3,7 +3,7 @@ builder = "DOCKERFILE"
 dockerfilePath = "Dockerfile"
 
 [deploy]
-startCommand = "sh -c 'cd Backend && npm start & cd Frontend && npm start'"
+startCommand = "sh -c 'cd Backend && PORT=8000 npm start & cd Frontend && PORT=3000 npm start'"
 numReplicas = 1
 restartPolicyType = "ON_FAILURE"
 
@@ -14,3 +14,7 @@ protocol = "tcp"
 [[ports]]
 port = 8000
 protocol = "tcp"
+
+[deploy.envs]
+PORT = "8000"
+FRONTEND_PORT = "3000"

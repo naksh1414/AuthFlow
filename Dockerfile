@@ -17,5 +17,7 @@ RUN cd Frontend && \
     npm install --legacy-peer-deps && \
     npm run build
 
+EXPOSE 3000
+EXPOSE 8000    
 # Start command will be handled by railway.toml
 CMD ["sh", "-c", "cd Backend && npm start & cd Frontend && npm start"]
