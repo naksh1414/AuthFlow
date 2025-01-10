@@ -27,7 +27,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - NEXT_PUBLIC_API_URL=https://authflow-production.up.railway.app/api/v1
+      - NEXT_PUBLIC_API_URL=https://neecopbackend-production.up.railway.app/api/v1
     volumes:
       - ./Frontend:/app
       - /app/node_modules
