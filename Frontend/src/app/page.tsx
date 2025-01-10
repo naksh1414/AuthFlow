@@ -15,7 +15,9 @@ export default function Home() {
   };
 
   if (isLoading) {
-    return <Loader></Loader>;
+    return <div className="flex-1 flex items-center justify-center">
+      <Loader></Loader>
+      </div>;
   }
 
   return (
