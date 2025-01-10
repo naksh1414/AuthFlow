@@ -7,7 +7,7 @@ import {
   useEffect,
 } from "react";
 import { authApi } from "@/services/api";
-
+import { toast } from "sonner";
 interface User {
   firstName: string;
   lastName: string;
@@ -77,11 +77,11 @@ export function UserProvider({ children }: { children: ReactNode }) {
       if (!token || !storedUser) {
         console.log("No token or user found");
       }
-
       // Only verify the token
       await authApi.verifyToken();
       // If verification successful, use stored user data
       setUser(storedUser);
+      toast.success("Session restored successfully");
     } catch (error) {
       if (error instanceof Error) {
         console.log("Error verifying token:", error.message);
@@ -101,9 +101,11 @@ export function UserProvider({ children }: { children: ReactNode }) {
       if (userData) {
         setUser(userData);
         saveUserToLocalStorage(userData);
+        toast.success("Login successful");
       }
       return response;
     } catch (error) {
+      toast.error("Login failed");
       throw error;
     }
   };
@@ -121,9 +123,11 @@ export function UserProvider({ children }: { children: ReactNode }) {
       if (userData) {
         setUser(userData);
         saveUserToLocalStorage(userData);
+        toast.success("Registration successful");
       }
       return response;
     } catch (error) {
+      toast.error("Registeration failed");
       throw error;
     }
   };
@@ -131,6 +135,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
   const logout = () => {
     authApi.logout();
     setUser(null);
+    toast.success("Logout successful");
     localStorage.removeItem("user");
     localStorage.removeItem("token");
   };
