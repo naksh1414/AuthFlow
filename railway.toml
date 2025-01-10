@@ -1,7 +1,7 @@
 # railway.toml
 [build]
 builder = "nixpacks"
-buildCommand = "cd Backend && npm install && npm run build && cd ../Frontend && npm install --legacy-peer-deps && npm run build"
+buildCommand = "cd Backend && npm install && npm run build && cd ../Frontend && npm install && npm run build"
 
 [[services]]
 name = "backend"
@@ -17,4 +17,3 @@ autoDeploy = true
 
 [deploy]
 numReplicas = 1
-restartPolicyType = "on-failure"
