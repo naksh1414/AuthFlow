@@ -2,6 +2,7 @@
 [build]
 builder = "nixpacks"
 buildCommand = "cd Backend && npm install && npm run build && cd ../Frontend && npm install && npm run build"
+startCommand = "cd Backend && npm start && cd ../Frontend && npm start"
 
 [[services]]
 name = "backend"
