@@ -1,20 +1,21 @@
 # railway.toml
 [build]
 builder = "nixpacks"
-buildCommand = "cd Backend && npm install && npm run build && cd ../Frontend && npm install && npm run build"
-startCommand = "cd Backend && npm start && cd ../Frontend && npm start"
+buildCommand = "cd Backend && npm install && npm run build && cd ../Frontend && npm install --legacy-peer-deps && npm run build"
+
+[deploy]
+startCommand = "cd Backend && npm start & cd ../Frontend && npm start"
+restartPolicyType = "ON_FAILURE"
+numReplicas = 1
 
 [[services]]
 name = "backend"
-dockerfile = "Backend/Dockerfile"
 healthcheck = "/health"
 autoDeploy = true
+port = 8000
 
 [[services]]
 name = "frontend"
-dockerfile = "Frontend/Dockerfile"
 healthcheck = "/"
 autoDeploy = true
-
-[deploy]
-numReplicas = 1
+port = 3000
