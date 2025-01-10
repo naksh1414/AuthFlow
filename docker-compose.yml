@@ -1,9 +1,11 @@
 version: "3.8"
+
 services:
   backend:
     build:
       context: ./Backend
       dockerfile: Dockerfile
+    container_name: authflow-backend
     ports:
       - "8000:8000"
     environment:
@@ -21,6 +23,7 @@ services:
     build:
       context: ./Frontend
       dockerfile: Dockerfile
+    container_name: authflow-frontend
     ports:
       - "3000:3000"
     environment:
@@ -32,6 +35,7 @@ services:
       - backend
     networks:
       - authflow-network
+
 networks:
   authflow-network:
     driver: bridge
