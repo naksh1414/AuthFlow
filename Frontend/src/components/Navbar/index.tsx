@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, LogIn, UserPlus, LogOut } from "lucide-react";
 import { useUser } from "@/context/UserContext";
-
+import Loader from "../Loader";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
@@ -19,12 +19,9 @@ export default function Navbar() {
     }
   };
   if (isLoading) {
-    return (
-      <div className="flex-1 flex items-center justify-center">
-        <div className="text-white">Loading...</div>
-      </div>
-    );
+    return <Loader></Loader>;
   }
+
   return (
     <nav className="bg-gray-900 border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

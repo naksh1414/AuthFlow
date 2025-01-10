@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { LogIn, UserPlus, LogOut } from "lucide-react";
 import { useUser } from "@/context/UserContext";
-
+import Loader from "@/components/Loader";
 export default function Home() {
   const { user, logout, isLoading } = useUser();
 
@@ -15,11 +15,7 @@ export default function Home() {
   };
 
   if (isLoading) {
-    return (
-      <div className="flex-1 flex items-center justify-center">
-        <div className="text-white">Loading...</div>
-      </div>
-    );
+    return <Loader></Loader>;
   }
 
   return (
