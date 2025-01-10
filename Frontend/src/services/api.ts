@@ -1,8 +1,9 @@
 // src/services/api.ts
 import axios from "axios";
-
+const APIURL = process.env.NEXT_PUBLIC_API_URL || "https://authflow-production.up.railway.app/api/v1";
+console.log('API URL being used:', API_URL);
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || "https://authflow-production.up.railway.app/api/v1",
+  baseURL: APIURL,
   headers: {
     "Content-Type": "application/json",
   },

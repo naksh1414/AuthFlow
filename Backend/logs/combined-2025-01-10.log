@@ -319,3 +319,9 @@
 2025-01-10 13:22:56 info: User logged in successfully: 678116e0c7e0e34bea640e16
 2025-01-10 13:25:24 info: User logged in successfully: 678116e0c7e0e34bea640e16
 2025-01-10 13:25:33 info: User logged in successfully: 67811e8cc7e0e34bea640e1f
+2025-01-10 13:29:59 info: User logged in successfully: 67811e8cc7e0e34bea640e1f
+2025-01-10 13:30:59 error: Login failed
+2025-01-10 13:30:59 error: CustomError: Invalid credentials
+    at AuthService.login (/app/dist/services/auth.service.js:112:23)
+    at async login (/app/dist/controllers/auth.controller.js:27:28)
+2025-01-10 13:31:05 info: User logged in successfully: 67811e8cc7e0e34bea640e1f
